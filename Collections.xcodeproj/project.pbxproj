@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F016263928B3B5B9000A615D /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016263728B3B5B9000A615D /* DictionaryViewController.swift */; };
+		F016263A28B3B5B9000A615D /* ArrayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016263828B3B5B9000A615D /* ArrayCollectionViewCell.swift */; };
 		F02162D128B3B4A500A32C65 /* ArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02162CF28B3B4A400A32C65 /* ArrayManager.swift */; };
 		F02162D228B3B4A500A32C65 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02162D028B3B4A500A32C65 /* CustomTimer.swift */; };
 		F02FF7F628B25466004526C0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02FF7F528B25466004526C0 /* MenuTableViewCell.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F016263728B3B5B9000A615D /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		F016263828B3B5B9000A615D /* ArrayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayCollectionViewCell.swift; sourceTree = "<group>"; };
 		F02162CF28B3B4A400A32C65 /* ArrayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayManager.swift; sourceTree = "<group>"; };
 		F02162D028B3B4A500A32C65 /* CustomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		F02FF7F528B25466004526C0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		F0DCAF2E28AE6629008584A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F016263828B3B5B9000A615D /* ArrayCollectionViewCell.swift */,
+				F016263728B3B5B9000A615D /* DictionaryViewController.swift */,
 				F0DCAF0228AE6422008584A9 /* MenuViewController.swift */,
 				F0AE526428AE7BF3008CD647 /* SetViewController.swift */,
 				F02FF7F528B25466004526C0 /* MenuTableViewCell.swift */,
@@ -272,11 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F016263928B3B5B9000A615D /* DictionaryViewController.swift in Sources */,
 				F02162D228B3B4A500A32C65 /* CustomTimer.swift in Sources */,
 				F0DCAF0328AE6422008584A9 /* MenuViewController.swift in Sources */,
 				F0AE526528AE7BF3008CD647 /* SetViewController.swift in Sources */,
 				F042D69328B231550096EA74 /* SetManager.swift in Sources */,
 				F02162D128B3B4A500A32C65 /* ArrayManager.swift in Sources */,
+				F016263A28B3B5B9000A615D /* ArrayCollectionViewCell.swift in Sources */,
 				F0DCAEFF28AE6422008584A9 /* AppDelegate.swift in Sources */,
 				F0DCAF0128AE6422008584A9 /* SceneDelegate.swift in Sources */,
 				F02FF7F628B25466004526C0 /* MenuTableViewCell.swift in Sources */,
