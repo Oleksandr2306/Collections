@@ -10,7 +10,7 @@ import UIKit
 final class ArrayViewController: UIViewController {
     
     @IBOutlet weak private var collection: UICollectionView!
-    private lazy var arrayManager = ArrayManager()
+    private lazy var arrayManager = IntArrayManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,17 @@ final class ArrayViewController: UIViewController {
 
 extension ArrayViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrayManager.arrayIsEmpty() ? 1 : 13
+        arrayManager.isEmpty() ? 1 : 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = ArrayCollectionViewCell()
+        var cell = CustomCollectionViewCell()
         
         if indexPath.row == 0 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ArrayCollectionViewCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
             cell.layer.borderWidth = 0.5
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionCell", for: indexPath) as! ArrayCollectionViewCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionCell", for: indexPath) as! CustomCollectionViewCell
             cell.layer.borderWidth = 0.5
             cell.setCellLabelText(for: indexPath.row)
         }
@@ -47,7 +47,7 @@ extension ArrayViewController: UICollectionViewDataSource {
 
 extension ArrayViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? ArrayCollectionViewCell else { return }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell else { return }
         switch indexPath.row {
         case 0:
             if !cell.isTapped {
@@ -223,7 +223,7 @@ extension ArrayViewController: UICollectionViewDelegate {
         }
     }
     
-    func CellTapped(cell: ArrayCollectionViewCell) {
+    func CellTapped(cell: CustomCollectionViewCell) {
         
     }
 }

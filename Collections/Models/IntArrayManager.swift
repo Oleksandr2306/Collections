@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class ArrayManager {
-    var array = [Int]()
+final class IntArrayManager {
+    private var array = [Int]()
     
     func createArray(completion: @escaping () -> Void) {
         DispatchQueue.global(qos: .background).async {
@@ -141,11 +141,11 @@ final class ArrayManager {
         }
     }
     
-    func arrayIsEmpty() -> Bool {             
-        array.isEmpty ? true : false
+    func isEmpty() -> Bool {             
+        array.isEmpty
     }
     
-    func arraySize() -> Int {
+    func getSize() -> Int {
         array.count
     }
     

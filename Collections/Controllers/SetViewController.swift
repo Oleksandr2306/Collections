@@ -31,7 +31,7 @@ class SetViewController: UIViewController {
         guard let text2 = supportTextField.text else { return }
         
         let result = setManager.allMatchingCharacters(for: text1, and: text2)
-        allMatchesLabel.text = result
+        allMatchesLabel.text = String(result)
     }
     
     @IBAction private func allNotMatchesButtonTapped(_ sender: UIButton) {
@@ -39,7 +39,7 @@ class SetViewController: UIViewController {
         guard let text2 = supportTextField.text else { return }
         
         let result = setManager.allNotMatchingCharacters(for: text1, and: text2)
-        allNotMatchesLabel.text = result
+        allNotMatchesLabel.text = String(result)
     }
     
     @IBAction private func allUniqueCharactersButtonTapped(_ sender: UIButton) {
@@ -47,7 +47,7 @@ class SetViewController: UIViewController {
         guard let text2 = supportTextField.text else { return }
         
         let result = setManager.allUniqueCharacters(from: text1, butNotFrom: text2)
-        allUniqueCharactersLabel.text = result
+        allUniqueCharactersLabel.text = String(result)
     }
     
     @IBAction private func textFieldsEditing(_ sender: UITextField) {

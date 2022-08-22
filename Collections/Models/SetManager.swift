@@ -9,16 +9,16 @@ import Foundation
 
 final class SetManager {
     
-    func allMatchingCharacters(for first: String, and second: String) -> String {
+    func allMatchingCharacters(for first: String, and second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()
         
         result = input.intersection(exclusions)
-        return String(result)
+        return result
     }
      
-    func allNotMatchingCharacters(for first: String, and second: String) -> String {
+    func allNotMatchingCharacters(for first: String, and second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()
@@ -27,16 +27,16 @@ final class SetManager {
         let notMatchingCharactersWithInput = exclusions.filter{ !input.contains($0) }
         
         result = result.union(notMatchingCharactersWithExclusions).union(notMatchingCharactersWithInput)
-        return String(result)
+        return result
     }
     
-    func allUniqueCharacters(from first: String, butNotFrom second: String) -> String {
+    func allUniqueCharacters(from first: String, butNotFrom second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()
         
         result = input.filter{ !exclusions.contains($0) }
-        return String(result)
+        return result
     }
     
 }
