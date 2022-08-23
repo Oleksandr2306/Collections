@@ -23,7 +23,28 @@ final class DictionaryManager {
         }
     }
     
-    func dictionaryIsEmpty() -> Bool {
+    func getFirst() -> String {
+        (dictionary["Name\(0)"])!
+    }
+    
+    func getLast() -> String {
+        (dictionary["Name\(dictionary.count-1)"])!
+    }
+    
+    func findElement(phone: String, completion: @escaping () -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            for (_, value) in self.dictionary {
+                if value == phone {
+                    break
+                }
+            }
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    func isEmpty() -> Bool {
         dictionary.isEmpty
     }
     

@@ -41,6 +41,7 @@ extension MenuViewController: UITableViewDataSource {
     
 }
 
+//MARK: - UITableViewDelegate
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "GoTo\(menuOptions[indexPath.row])", sender: self)

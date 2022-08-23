@@ -25,27 +25,33 @@ final class StructArrayManager {
     }
     
     func getFirst() -> Contact {
-        array[0]
+        array[array.startIndex]
     }
     
     func getLast() -> Contact {
-        array[array.endIndex]
+        array[array.endIndex - 1]
     }
     
-    func findElement(phone: String) -> Bool {
-        for element in array {
-            if element.phone == phone {
-                return true
+    func findElement(phone: String, completion: @escaping () -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            for element in self.array {
+                if element.phone == phone {
+                    print("YES")
+                    break
+                }
+            }
+            print("YEAH")
+            DispatchQueue.main.async {
+                completion()
             }
         }
-        return false
     }
     
-    func arrayIsEmpty() -> Bool {
+    func isEmpty() -> Bool {
         return array.isEmpty
     }
     
-    func getArraySize() -> Int {
+    func getSize() -> Int {
         array.count
     }
 }

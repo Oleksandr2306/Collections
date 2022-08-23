@@ -23,6 +23,7 @@ final class ArrayViewController: UIViewController {
     
 }
 
+//MARK: - UICollectionViewDataSource
 extension ArrayViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         arrayManager.isEmpty() ? 1 : 13
@@ -37,7 +38,7 @@ extension ArrayViewController: UICollectionViewDataSource {
         } else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionCell", for: indexPath) as! CustomCollectionViewCell
             cell.layer.borderWidth = 0.5
-            cell.setCellLabelText(for: indexPath.row)
+            cell.setArrayCellLabelText(for: indexPath.row)
         }
         
         return cell
@@ -45,6 +46,7 @@ extension ArrayViewController: UICollectionViewDataSource {
     
 }
 
+//MARK: - UICollectionViewDelegate
 extension ArrayViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell else { return }
@@ -58,7 +60,7 @@ extension ArrayViewController: UICollectionViewDelegate {
                     collectionView.reloadData()
                     timer.stop()
                     cell.activityIndicator.isHidden = true
-                    cell.cellLabel.text = String(format: "Array creation time: %.3f ms.", timer.totalTime)
+                    cell.cellLabel.text = String(format: "Array creation time: %.3f s.", timer.totalTime)
                 }
             }
             break
@@ -222,12 +224,9 @@ extension ArrayViewController: UICollectionViewDelegate {
             break
         }
     }
-    
-    func CellTapped(cell: CustomCollectionViewCell) {
-        
-    }
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout
 extension ArrayViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -236,7 +235,7 @@ extension ArrayViewController: UICollectionViewDelegateFlowLayout {
         if indexPath.item == 0  {
             return CGSize(width: collectionView.frame.width, height: 90)
         } else {
-            return CGSize(width: widthPerItem, height: (collectionView.frame.height - 180) / 6)
+            return CGSize(width: widthPerItem, height: (collectionView.frame.height - 180) / 8)
         }
     }
     
