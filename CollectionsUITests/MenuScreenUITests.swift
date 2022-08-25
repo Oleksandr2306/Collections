@@ -25,9 +25,4 @@ final class ArrayTest: XCTestCase {
             XCTAssertTrue(element.exists)
         }
     }
-    
-    func test() throws {
-        menuOptions[0].tap()
-    }
-    
 }
