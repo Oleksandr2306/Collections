@@ -28,6 +28,7 @@ final class MenuViewController: UIViewController {
 
 }
 
+//MARK: - UITableViewDataSource
 extension MenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions.count
@@ -38,12 +39,12 @@ extension MenuViewController: UITableViewDataSource {
         cell.setTitle(title: menuOptions[indexPath.row])
         return cell
     }
-    
 }
 
 //MARK: - UITableViewDelegate
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "GoTo\(menuOptions[indexPath.row])", sender: self)
     }
 }
