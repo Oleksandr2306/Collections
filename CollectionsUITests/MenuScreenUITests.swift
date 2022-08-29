@@ -20,7 +20,7 @@ final class ArrayTest: XCTestCase {
         app.launch()
     }
     
-    func test_UIExists() throws {
+    func test_menuTableRows_exist() throws {
         for element in menuOptions {
             XCTAssertTrue(element.exists)
         }

@@ -8,7 +8,7 @@
 import UIKit
 
 final class MenuTableViewCell: UITableViewCell {
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     func setTitle(title: String) {
         titleLabel.text = title
