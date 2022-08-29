@@ -21,9 +21,6 @@ final class MenuViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-//        menuTable.dataSource = self
-//        menuTable.delegate = self
-//        tableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
