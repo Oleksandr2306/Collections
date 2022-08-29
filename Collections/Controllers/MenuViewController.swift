@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MenuViewController: UIViewController {
+final class MenuViewController: UITableViewController {
 
     @IBOutlet weak private var menuTable: UITableView!
     
@@ -21,8 +21,9 @@ final class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        menuTable.dataSource = self
-        menuTable.delegate = self
+//        menuTable.dataSource = self
+//        menuTable.delegate = self
+//        tableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,25 +31,19 @@ final class MenuViewController: UIViewController {
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
 
-}
-
-//MARK: - UITableViewDataSource
-extension MenuViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions.allCases.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuTableViewCell
         cell.setTitle(title: menuOptions.allCases[indexPath.row].rawValue)
         return cell
     }
-}
-
-//MARK: - UITableViewDelegate
-extension MenuViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "goTo\(menuOptions.allCases[indexPath.row].rawValue)", sender: self)
     }
+    
 }
