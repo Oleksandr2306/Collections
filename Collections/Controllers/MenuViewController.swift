@@ -8,8 +8,6 @@
 import UIKit
 
 final class MenuViewController: UITableViewController {
-
-    @IBOutlet weak private var menuTable: UITableView!
     
     private enum menuOptions: String, CaseIterable {
         case array = "Array"
