@@ -21,129 +21,245 @@ final class ArrayTests: XCTestCase {
     }
     
     func test_arrayCreation() throws {
+        let expectation = expectation(description: "Array is created")
         sut.createArray {
-            let result = self.sut.getSize()
-            let expectedResult = 10_000_000
-            XCTAssertEqual(result, expectedResult)
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5.0) { (error) in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 10_000_000
+                XCTAssertEqual(result, expectedResult)
+            }
         }
     }
     
     func test_appendThousandAtTheBeginning_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
             self.sut.appendThousandAtTheBeginningOneByOne {
-                let result = self.sut.getSize()
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[0], 999)
             }
         }
     }
     
     func test_appendThousandAtTheBeginning_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
-            self.sut.appendThousandAtTheBeginningAtOnce() {
-                let result = self.sut.getSize()
+            self.sut.appendThousandAtTheBeginningAtOnce {
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[0], 0)
             }
         }
     }
     
     func test_appendThousandInTheMiddle_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
             self.sut.appendThousandInTheMiddleOneByOne {
-                let result = self.sut.getSize()
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 998)
             }
         }
     }
     
     func test_appendThousandInTheMiddle_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
             self.sut.appendThousandInTheMiddleAtOnce {
-                let result = self.sut.getSize()
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 500)
             }
         }
     }
     
     func test_appendThousandAtTheEnd_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
             self.sut.appendThousandAtTheEndOneByOne {
-                let result = self.sut.getSize()
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 999)
             }
         }
     }
     
     func test_appendThousandAtTheEnd_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements appended")
         sut.createArray {
             self.sut.appendThousandAtTheEndAtOnce {
-                let result = self.sut.getSize()
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
                 let expectedResult = 10_001_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 999)
             }
         }
     }
     
     func test_removeThousandAtTheBeginning_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandAtTheBeginningOneByOne {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[0], 1000)
             }
         }
     }
     
     func test_removeThousandAtTheBeginning_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandAtTheBeginningAtOnce {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[0], 1000)
             }
         }
     }
     
     func test_removeThousandInTheMiddle_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandInTheMiddleOneByOne {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 5000500)
             }
         }
     }
     
     func test_removeThousandInTheMiddle_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandInTheMiddleAtOnce {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 5000500)
             }
         }
     }
     
     func test_removeThousandAtTheEnd_oneByOne() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandAtTheEndOneByOne {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 9_998_999)
             }
         }
     }
     
     func test_removeThousandAtTheEnd_atOnce() throws {
+        let expectation = expectation(description: "Thousand of elements removed")
         sut.createArray {
             self.sut.removeThousandAtTheEndAtOnce {
-                let result = self.sut.getSize()
-                let expectedResult = 99_999_000
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if error != nil {
+                XCTFail()
+            } else {
+                let result = self.sut.arraySize()
+                let expectedResult = 9_999_000
                 XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 9_998_999)
             }
         }
     }

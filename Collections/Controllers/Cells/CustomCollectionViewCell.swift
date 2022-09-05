@@ -12,36 +12,38 @@ final class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private enum arrayMenuOptions: String, CaseIterable {
-        case option1 = "Insert 1000 elements at the beginning one-by-one"
-        case option2 = "Insert 1000 elements at the beginning"
-        case option3 = "Insert 1000 elements in the middle one-by-one"
-        case option4 = "Insert 1000 elements in the middle"
-        case option5 = "Insert 1000 elements at the end one-by-one"
-        case option6 = "Insert 1000 elements at the end"
-        case option7 = "Remove 1000 elements at the beginning one-by-one"
-        case option8 = "Remove 1000 elements at the beginning"
-        case option9 = "Remove 1000 elements in the middle one-by-one"
-        case option10 = "Remove 1000 elements in the middle"
-        case option11 = "Remove 1000 elements at the end one-by-one"
-        case option12 = "Remove 1000 elements at the end"
-    }
+    private let arrayMenuOptions = ["Insert 1000 elements at the beginning one-by-one",
+                                   "Insert 1000 elements at the beginning",
+                                   "Insert 1000 elements in the middle one-by-one",
+                                   "Insert 1000 elements in the middle",
+                                   "Insert 1000 elements at the end one-by-one",
+                                   "Insert 1000 elements at the end",
+                                   "Remove 1000 elements at the beginning one-by-one",
+                                   "Remove 1000 elements at the beginning",
+                                   "Remove 1000 elements in the middle one-by-one",
+                                   "Remove 1000 elements in the middle",
+                                   "Remove 1000 elements at the end one-by-one",
+                                   "Remove 1000 elements at the end"]
     
     var isTapped = false {
         didSet {
-            if isTapped {
-                cellLabel.text? = ""
-                activityIndicator.isHidden = false
-                activityIndicator.startAnimating()
-                backgroundColor = .systemGray6
-            } else {
-                cellLabel.isHidden = false
-                activityIndicator.isHidden = true
-            }
+            setTitle()
         }
     }
     
     func setCustomCellLabelText(for index: Int) {
-        cellLabel.text? = arrayMenuOptions.allCases[index].rawValue
+        cellLabel.text? = arrayMenuOptions[index]
+    }
+    
+    private func setTitle() {
+        if isTapped {
+            cellLabel.text? = ""
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            backgroundColor = .systemGray6
+        } else {
+            cellLabel.isHidden = false
+            activityIndicator.isHidden = true
+        }
     }
 }

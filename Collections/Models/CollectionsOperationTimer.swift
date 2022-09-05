@@ -7,14 +7,14 @@
 
 import Foundation
 
-final class CustomTimer {
+final class CollectionsOperationTimer {
     private var timer = Timer()
-    var totalTime: Double = 0
+    private(set) var totalTime: Double = 0
     
     func start() {
         totalTime = 0
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            self.totalTime += 0.1
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
+            self.totalTime += 0.01
         }
     }
     

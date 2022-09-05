@@ -8,10 +8,14 @@
 import Foundation
 
 final class IntArrayManager {
-    private var array = [Int]()
+    private(set) var array = [Int]()
+    private let arrayOperationsQueue = DispatchQueue(label: "array")
+    var isEmptyArray: Bool {
+        array.isEmpty
+    }
     
     func createArray(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for element in 0...9_999_999 {
                 self.array.append(element)
             }
@@ -22,7 +26,7 @@ final class IntArrayManager {
     }
     
     func appendThousandAtTheBeginningOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for element in 0...999 {
                 self.array.insert(element, at: self.array.startIndex)
             }
@@ -33,7 +37,7 @@ final class IntArrayManager {
     }
     
     func appendThousandAtTheBeginningAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             self.array.insert(contentsOf: Array(0...999), at: self.array.startIndex)
             DispatchQueue.main.async {
                 completion()
@@ -42,7 +46,7 @@ final class IntArrayManager {
     }
     
     func appendThousandInTheMiddleOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for element in 0...999 {
                 self.array.insert(element, at: self.array.count / 2)
             }
@@ -53,7 +57,7 @@ final class IntArrayManager {
     }
     
     func appendThousandInTheMiddleAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             self.array.insert(contentsOf: Array(0...999), at: self.array.count / 2)
             DispatchQueue.main.async {
                 completion()
@@ -62,7 +66,7 @@ final class IntArrayManager {
     }
     
     func appendThousandAtTheEndOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for element in 0...999 {
                 self.array.append(element)
             }
@@ -73,7 +77,7 @@ final class IntArrayManager {
     }
     
     func appendThousandAtTheEndAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             self.array.append(contentsOf: Array(0...999))
             DispatchQueue.main.async {
                 completion()
@@ -82,7 +86,7 @@ final class IntArrayManager {
     }
     
     func removeThousandAtTheBeginningOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for _ in 0...999 {
                 self.array.removeFirst()
             }
@@ -93,7 +97,7 @@ final class IntArrayManager {
     }
     
     func removeThousandAtTheBeginningAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             self.array.removeFirst(1000)
             DispatchQueue.main.async {
                 completion()
@@ -102,7 +106,7 @@ final class IntArrayManager {
     }
     
     func removeThousandInTheMiddleOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for _ in 0...999 {
                 self.array.remove(at: self.array.count / 2)
             }
@@ -113,8 +117,8 @@ final class IntArrayManager {
     }
     
     func removeThousandInTheMiddleAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
-            self.array.removeSubrange(self.array.count / 2...(self.array.count / 2) + 999 )
+        arrayOperationsQueue.async {
+            self.array.removeSubrange((self.array.count / 2) - 500...(self.array.count / 2) + 499)
             DispatchQueue.main.async {
                 completion()
             }
@@ -122,7 +126,7 @@ final class IntArrayManager {
     }
     
     func removeThousandAtTheEndOneByOne(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             for _ in 0...999 {
                 self.array.removeLast()
             }
@@ -133,7 +137,7 @@ final class IntArrayManager {
     }
     
     func removeThousandAtTheEndAtOnce(completion: @escaping () -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        arrayOperationsQueue.async {
             self.array.removeLast(1000)
             DispatchQueue.main.async {
                 completion()
@@ -141,11 +145,7 @@ final class IntArrayManager {
         }
     }
     
-    func isEmpty() -> Bool {
-        array.isEmpty
-    }
-    
-    func getSize() -> Int {
+    func arraySize() -> Int {
         array.count
     }
     
