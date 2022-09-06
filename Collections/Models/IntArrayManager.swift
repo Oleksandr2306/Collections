@@ -13,6 +13,9 @@ final class IntArrayManager {
     var isEmptyArray: Bool {
         array.isEmpty
     }
+    var arraySize: Int {
+        array.count
+    }
     
     func createArray(completion: @escaping () -> Void) {
         arrayOperationsQueue.async {
@@ -144,9 +147,4 @@ final class IntArrayManager {
             }
         }
     }
-    
-    func arraySize() -> Int {
-        array.count
-    }
-    
 }

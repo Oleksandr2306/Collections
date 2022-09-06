@@ -29,9 +29,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_000_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
             }
         }
     }
@@ -47,9 +47,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[0], 999)
             }
         }
@@ -66,9 +66,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[0], 0)
             }
         }
@@ -85,9 +85,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 998)
             }
         }
@@ -104,9 +104,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 500)
             }
         }
@@ -123,9 +123,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 999)
             }
         }
@@ -142,9 +142,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 10_001_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 999)
             }
         }
@@ -161,9 +161,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[0], 1000)
             }
         }
@@ -180,9 +180,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[0], 1000)
             }
         }
@@ -199,9 +199,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 5000500)
             }
         }
@@ -218,9 +218,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count / 2], 5000500)
             }
         }
@@ -237,9 +237,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 9_998_999)
             }
         }
@@ -256,9 +256,9 @@ final class ArrayTests: XCTestCase {
             if error != nil {
                 XCTFail()
             } else {
-                let result = self.sut.arraySize()
+                let expectedArraySize = self.sut.arraySize
                 let expectedResult = 9_999_000
-                XCTAssertEqual(result, expectedResult)
+                XCTAssertEqual(expectedArraySize, expectedResult)
                 XCTAssertEqual(self.sut.array[self.sut.array.count - 1], 9_998_999)
             }
         }
