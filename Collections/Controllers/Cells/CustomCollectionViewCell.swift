@@ -25,6 +25,12 @@ final class CustomCollectionViewCell: UICollectionViewCell {
                                    "Remove 1000 elements at the end one-by-one",
                                    "Remove 1000 elements at the end"]
     
+    private enum dictionaryMenuOptions: String, CaseIterable {
+        case findFirst = "Find the first element"
+        case findLast = "Find the last element"
+        case findNonExist = "Search for a non-existing element"
+    }
+    
     var isTapped = false {
         didSet {
             setTitle()
@@ -33,6 +39,18 @@ final class CustomCollectionViewCell: UICollectionViewCell {
     
     func setCustomCellLabelText(for index: Int) {
         cellLabel.text? = arrayMenuOptions[index]
+    }
+    
+    func setDictionaryCellLabelText(for index: Int) {
+        cellLabel.text = dictionaryMenuOptions.allCases[index].rawValue
+    }
+    
+    func isSelected() {
+        isTapped = true
+    }
+    
+    func isDeselected() {
+        isTapped = false
     }
     
     private func setTitle() {
