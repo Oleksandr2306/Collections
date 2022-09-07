@@ -22,6 +22,9 @@
 		F0DCAF0828AE6423008584A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DCAF0728AE6423008584A9 /* Assets.xcassets */; };
 		F0DCAF0B28AE6423008584A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DCAF0928AE6423008584A9 /* LaunchScreen.storyboard */; };
 		F0F88A5628C8E120004F103E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F88A5528C8E120004F103E /* Contact.swift */; };
+		F0F88A5828C8E17A004F103E /* ContactsDictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F88A5728C8E17A004F103E /* ContactsDictionaryManager.swift */; };
+		F0F88A5A28C8E19E004F103E /* ContactsArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F88A5928C8E19E004F103E /* ContactsArrayManager.swift */; };
+		F0F88A5C28C8E1E4004F103E /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F88A5B28C8E1E4004F103E /* DictionaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		F0DCAF0A28AE6423008584A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0DCAF0C28AE6423008584A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0F88A5528C8E120004F103E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F0F88A5728C8E17A004F103E /* ContactsDictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDictionaryManager.swift; sourceTree = "<group>"; };
+		F0F88A5928C8E19E004F103E /* ContactsArrayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsArrayManager.swift; sourceTree = "<group>"; };
+		F0F88A5B28C8E1E4004F103E /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,8 @@
 				F0BA93A928BFDBA300A44CBF /* IntArrayManager.swift */,
 				F0BA93AB28BFDBD100A44CBF /* CollectionsOperationTimer.swift */,
 				F0F88A5528C8E120004F103E /* Contact.swift */,
+				F0F88A5728C8E17A004F103E /* ContactsDictionaryManager.swift */,
+				F0F88A5928C8E19E004F103E /* ContactsArrayManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			children = (
 				F0DCAF0228AE6422008584A9 /* MenuViewController.swift */,
 				F0BA93AD28BFDC0E00A44CBF /* ArrayViewController.swift */,
+				F0F88A5B28C8E1E4004F103E /* DictionaryViewController.swift */,
 				F06CEFF528B4C7920055E7E0 /* Cells */,
 			);
 			path = Controllers;
@@ -331,9 +340,12 @@
 				F0DCAF0328AE6422008584A9 /* MenuViewController.swift in Sources */,
 				F0BA93B028BFDC6F00A44CBF /* CustomCollectionViewCell.swift in Sources */,
 				F0DCAEFF28AE6422008584A9 /* AppDelegate.swift in Sources */,
+				F0F88A5C28C8E1E4004F103E /* DictionaryViewController.swift in Sources */,
+				F0F88A5828C8E17A004F103E /* ContactsDictionaryManager.swift in Sources */,
 				F0BA93AE28BFDC0E00A44CBF /* ArrayViewController.swift in Sources */,
 				F0DCAF0128AE6422008584A9 /* SceneDelegate.swift in Sources */,
 				F02FF7F628B25466004526C0 /* MenuTableViewCell.swift in Sources */,
+				F0F88A5A28C8E19E004F103E /* ContactsArrayManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
