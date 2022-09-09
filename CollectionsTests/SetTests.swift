@@ -2,31 +2,45 @@
 //  SetTests.swift
 //  CollectionsTests
 //
-//  Created by Oleksandr Melnyk on 09.09.2022.
+//  Created by Oleksandr Melnyk on 22.08.2022.
 //
 
 import XCTest
+@testable import Collections
 
 class SetTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var sut: SetManager!
+
+    override func setUp() {
+        sut = SetManager()
+    }
+    
+    override func tearDown() {
+        sut = nil
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_allMatchingCharacters_fromBoth() throws {
+        let result = sut.allMatchingCharacters(for: "qwerty", and: "tw")
+        let expectedResult: Set<String.Element> = ["t", "w"]
+        
+        XCTAssertEqual(result, expectedResult)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_allNotMatchingCharacters_fromBoth() throws {
+        let result = sut.allNotMatchingCharacters(for: "qwerty", and: "w")
+        let expectedResult: Set<String.Element> = ["q", "e", "r", "t", "y"]
+        
+        XCTAssertEqual(result, expectedResult)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_allUniqueCharacters_fromFirst() throws {
+        let result = sut.allUniqueCharacters(from: "qwerty", butNotFrom: "qwyuio")
+        let expectedResult: Set<String.Element> = ["e", "r", "t"]
+        
+        XCTAssertEqual(result, expectedResult)
     }
-
+    
 }
+
+

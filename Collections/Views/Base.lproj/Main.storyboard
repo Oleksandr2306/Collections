@@ -281,12 +281,18 @@
                                         <accessibility key="accessibilityConfiguration" identifier="InputTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="tfn-Mn-gYn"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-db-9bH">
                                         <rect key="frame" x="0.0" y="54" width="398" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AdditionalTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="l9p-12-76m"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -307,6 +313,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="allMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="q1V-sC-cvp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-lS-9OW">
                                         <rect key="frame" x="0.0" y="30" width="398" height="25"/>
@@ -332,6 +341,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="allNotMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="8ED-Th-JDa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWl-jZ-zRq">
                                         <rect key="frame" x="0.0" y="85" width="398" height="25"/>
@@ -357,6 +369,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="allUniqueCharactersButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="u0f-UL-DFa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAW-MF-Ou9">
                                         <rect key="frame" x="0.0" y="149" width="398" height="25"/>
@@ -383,6 +398,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="Jd6-gt-V1w"/>
+                    <connections>
+                        <outlet property="additionalTextField" destination="AP0-db-9bH" id="zTa-5g-YKR"/>
+                        <outlet property="allMatchesLabel" destination="TKZ-lS-9OW" id="lhA-xM-Thv"/>
+                        <outlet property="allNotMatchesLabel" destination="dWl-jZ-zRq" id="4QX-mz-qXo"/>
+                        <outlet property="allUniqueCharactersLabel" destination="BAW-MF-Ou9" id="kNt-Gv-qV1"/>
+                        <outlet property="inputTextField" destination="KAM-sd-coE" id="ydH-9y-9Yk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Es-0f-GE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
