@@ -11,10 +11,6 @@
 		F017966128C8E5C50026A67A /* ContactsDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017966028C8E5C50026A67A /* ContactsDictionaryTests.swift */; };
 		F017966328C8E5E60026A67A /* DictionaryScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017966228C8E5E60026A67A /* DictionaryScreenUITests.swift */; };
 		F02FF7F628B25466004526C0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02FF7F528B25466004526C0 /* MenuTableViewCell.swift */; };
-		F099639528CB3C49000BB327 /* SetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099639428CB3C49000BB327 /* SetManager.swift */; };
-		F099639728CB3C60000BB327 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099639628CB3C60000BB327 /* SetViewController.swift */; };
-		F099639928CB3CA6000BB327 /* SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099639828CB3CA6000BB327 /* SetTests.swift */; };
-		F099639B28CB3CBB000BB327 /* SetScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099639A28CB3CBB000BB327 /* SetScreenUITests.swift */; };
 		F0A4B2E528B3FF5F0056E4F4 /* MenuScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4B2E328B3FF530056E4F4 /* MenuScreenUITests.swift */; };
 		F0BA93AA28BFDBA300A44CBF /* IntArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA93A928BFDBA300A44CBF /* IntArrayManager.swift */; };
 		F0BA93AC28BFDBD100A44CBF /* CollectionsOperationTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA93AB28BFDBD100A44CBF /* CollectionsOperationTimer.swift */; };
@@ -22,6 +18,10 @@
 		F0BA93B028BFDC6F00A44CBF /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA93AF28BFDC6F00A44CBF /* CustomCollectionViewCell.swift */; };
 		F0BA93C928BFED4B00A44CBF /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA93C828BFED4B00A44CBF /* ArrayTests.swift */; };
 		F0BA93D028BFEDBB00A44CBF /* ArrayScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA93CF28BFEDBB00A44CBF /* ArrayScreenUITests.swift */; };
+		F0BF00E828CB695500B2DA7C /* SetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF00E728CB695500B2DA7C /* SetManager.swift */; };
+		F0BF00EA28CB697A00B2DA7C /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF00E928CB697A00B2DA7C /* SetViewController.swift */; };
+		F0BF00EC28CB69A200B2DA7C /* SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF00EB28CB69A200B2DA7C /* SetTests.swift */; };
+		F0BF00EE28CB69BF00B2DA7C /* SetScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF00ED28CB69BF00B2DA7C /* SetScreenUITests.swift */; };
 		F0DCAEFF28AE6422008584A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCAEFE28AE6422008584A9 /* AppDelegate.swift */; };
 		F0DCAF0128AE6422008584A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCAF0028AE6422008584A9 /* SceneDelegate.swift */; };
 		F0DCAF0328AE6422008584A9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCAF0228AE6422008584A9 /* MenuViewController.swift */; };
@@ -56,10 +56,6 @@
 		F017966028C8E5C50026A67A /* ContactsDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDictionaryTests.swift; sourceTree = "<group>"; };
 		F017966228C8E5E60026A67A /* DictionaryScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreenUITests.swift; sourceTree = "<group>"; };
 		F02FF7F528B25466004526C0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		F099639428CB3C49000BB327 /* SetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetManager.swift; sourceTree = "<group>"; };
-		F099639628CB3C60000BB327 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
-		F099639828CB3CA6000BB327 /* SetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTests.swift; sourceTree = "<group>"; };
-		F099639A28CB3CBB000BB327 /* SetScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetScreenUITests.swift; sourceTree = "<group>"; };
 		F0A4B2D828B3FF360056E4F4 /* CollectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A4B2E328B3FF530056E4F4 /* MenuScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenUITests.swift; sourceTree = "<group>"; };
 		F0BA93A928BFDBA300A44CBF /* IntArrayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntArrayManager.swift; sourceTree = "<group>"; };
@@ -69,6 +65,10 @@
 		F0BA93C628BFED4B00A44CBF /* CollectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BA93C828BFED4B00A44CBF /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		F0BA93CF28BFEDBB00A44CBF /* ArrayScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayScreenUITests.swift; sourceTree = "<group>"; };
+		F0BF00E728CB695500B2DA7C /* SetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetManager.swift; sourceTree = "<group>"; };
+		F0BF00E928CB697A00B2DA7C /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		F0BF00EB28CB69A200B2DA7C /* SetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTests.swift; sourceTree = "<group>"; };
+		F0BF00ED28CB69BF00B2DA7C /* SetScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetScreenUITests.swift; sourceTree = "<group>"; };
 		F0DCAEFB28AE6422008584A9 /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DCAEFE28AE6422008584A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0DCAF0028AE6422008584A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				F0A4B2E328B3FF530056E4F4 /* MenuScreenUITests.swift */,
 				F0BA93CF28BFEDBB00A44CBF /* ArrayScreenUITests.swift */,
 				F017966228C8E5E60026A67A /* DictionaryScreenUITests.swift */,
-				F099639A28CB3CBB000BB327 /* SetScreenUITests.swift */,
+				F0BF00ED28CB69BF00B2DA7C /* SetScreenUITests.swift */,
 			);
 			path = CollectionsUITests;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 				F0F88A5528C8E120004F103E /* Contact.swift */,
 				F0F88A5728C8E17A004F103E /* ContactsDictionaryManager.swift */,
 				F0F88A5928C8E19E004F103E /* ContactsArrayManager.swift */,
-				F099639428CB3C49000BB327 /* SetManager.swift */,
+				F0BF00E728CB695500B2DA7C /* SetManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 				F0BA93C828BFED4B00A44CBF /* ArrayTests.swift */,
 				F017965E28C8E5AD0026A67A /* ContactsArrayTests.swift */,
 				F017966028C8E5C50026A67A /* ContactsDictionaryTests.swift */,
-				F099639828CB3CA6000BB327 /* SetTests.swift */,
+				F0BF00EB28CB69A200B2DA7C /* SetTests.swift */,
 			);
 			path = CollectionsTests;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				F0DCAF0228AE6422008584A9 /* MenuViewController.swift */,
 				F0BA93AD28BFDC0E00A44CBF /* ArrayViewController.swift */,
 				F0F88A5B28C8E1E4004F103E /* DictionaryViewController.swift */,
-				F099639628CB3C60000BB327 /* SetViewController.swift */,
+				F0BF00E928CB697A00B2DA7C /* SetViewController.swift */,
 				F06CEFF528B4C7920055E7E0 /* Cells */,
 			);
 			path = Controllers;
@@ -340,7 +340,7 @@
 			files = (
 				F0A4B2E528B3FF5F0056E4F4 /* MenuScreenUITests.swift in Sources */,
 				F017966328C8E5E60026A67A /* DictionaryScreenUITests.swift in Sources */,
-				F099639B28CB3CBB000BB327 /* SetScreenUITests.swift in Sources */,
+				F0BF00EE28CB69BF00B2DA7C /* SetScreenUITests.swift in Sources */,
 				F0BA93D028BFEDBB00A44CBF /* ArrayScreenUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F099639928CB3CA6000BB327 /* SetTests.swift in Sources */,
+				F0BF00EC28CB69A200B2DA7C /* SetTests.swift in Sources */,
 				F017965F28C8E5AD0026A67A /* ContactsArrayTests.swift in Sources */,
 				F0BA93C928BFED4B00A44CBF /* ArrayTests.swift in Sources */,
 				F017966128C8E5C50026A67A /* ContactsDictionaryTests.swift in Sources */,
@@ -362,7 +362,7 @@
 			files = (
 				F0F88A5628C8E120004F103E /* Contact.swift in Sources */,
 				F0BA93AC28BFDBD100A44CBF /* CollectionsOperationTimer.swift in Sources */,
-				F099639528CB3C49000BB327 /* SetManager.swift in Sources */,
+				F0BF00E828CB695500B2DA7C /* SetManager.swift in Sources */,
 				F0BA93AA28BFDBA300A44CBF /* IntArrayManager.swift in Sources */,
 				F0DCAF0328AE6422008584A9 /* MenuViewController.swift in Sources */,
 				F0BA93B028BFDC6F00A44CBF /* CustomCollectionViewCell.swift in Sources */,
@@ -371,7 +371,7 @@
 				F0F88A5828C8E17A004F103E /* ContactsDictionaryManager.swift in Sources */,
 				F0BA93AE28BFDC0E00A44CBF /* ArrayViewController.swift in Sources */,
 				F0DCAF0128AE6422008584A9 /* SceneDelegate.swift in Sources */,
-				F099639728CB3C60000BB327 /* SetViewController.swift in Sources */,
+				F0BF00EA28CB697A00B2DA7C /* SetViewController.swift in Sources */,
 				F02FF7F628B25466004526C0 /* MenuTableViewCell.swift in Sources */,
 				F0F88A5A28C8E19E004F103E /* ContactsArrayManager.swift in Sources */,
 			);

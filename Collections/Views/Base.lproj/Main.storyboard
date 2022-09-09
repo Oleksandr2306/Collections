@@ -269,37 +269,37 @@
         <scene sceneID="ttt-xc-LLe">
             <objects>
                 <viewController id="IGJ-Ej-P01" customClass="SetViewController" customModule="Collections" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0YV-dn-SEO">
+                    <view key="view" contentMode="scaleToFill" id="8g7-s6-XPM">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-g2-dOC">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-ii-Ir9">
                                 <rect key="frame" x="15" y="123" width="398" height="88"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-sd-coE">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8NF-bD-nI6">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="InputTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="tfn-Mn-gYn"/>
+                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="lct-Yb-eHE"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-db-9bH">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8S-76-5Km">
                                         <rect key="frame" x="0.0" y="54" width="398" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AdditionalTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="l9p-12-76m"/>
+                                            <action selector="textFieldsEditing:" destination="IGJ-Ej-P01" eventType="editingChanged" id="Bjl-4u-6Dz"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-aM-NEt">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fg-SV-W0p">
                                 <rect key="frame" x="15" y="251" width="398" height="174"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oc7-LJ-Egx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ets-hY-0uA">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllMatchesButton"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -314,20 +314,20 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="allMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="q1V-sC-cvp"/>
+                                            <action selector="allMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="YqA-gp-H4N"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-lS-9OW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5K-uB-d7L">
                                         <rect key="frame" x="0.0" y="30" width="398" height="25"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllMatchesLabel"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="GCz-uO-fb3"/>
+                                            <constraint firstAttribute="height" constant="25" id="7v6-bQ-4cX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h4-aL-Ssv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iis-vq-eaj">
                                         <rect key="frame" x="0.0" y="55" width="398" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllNotMatchesButton"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -342,20 +342,20 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="allNotMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="8ED-Th-JDa"/>
+                                            <action selector="allNotMatchesButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="vbx-xA-Ddc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWl-jZ-zRq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-Pc-3Bo">
                                         <rect key="frame" x="0.0" y="85" width="398" height="25"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllNotMatchesButton"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="ak2-fb-Nbc"/>
+                                            <constraint firstAttribute="height" constant="25" id="hAJ-To-LJR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jff-si-op0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-Q2-F71">
                                         <rect key="frame" x="0.0" y="110" width="398" height="39"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllUniqueCharactersButton"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -370,14 +370,14 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="allUniqueCharactersButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="u0f-UL-DFa"/>
+                                            <action selector="allUniqueCharactersButtonTapped:" destination="IGJ-Ej-P01" eventType="touchUpInside" id="eGj-sZ-nfP"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAW-MF-Ou9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6H-Oj-mVc">
                                         <rect key="frame" x="0.0" y="149" width="398" height="25"/>
                                         <accessibility key="accessibilityConfiguration" identifier="AllUniqueCharactersButton"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="uWo-iS-dja"/>
+                                            <constraint firstAttribute="height" constant="25" id="3Uf-Kg-U56"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -386,24 +386,24 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Jfo-Bo-r0Q"/>
+                        <viewLayoutGuide key="safeArea" id="R4O-aq-0wb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jfo-Bo-r0Q" firstAttribute="trailing" secondItem="3sN-g2-dOC" secondAttribute="trailing" constant="15" id="0Mf-GT-8Fj"/>
-                            <constraint firstItem="3sN-g2-dOC" firstAttribute="top" secondItem="Jfo-Bo-r0Q" secondAttribute="top" constant="35" id="9vQ-CN-AcG"/>
-                            <constraint firstItem="e6R-aM-NEt" firstAttribute="top" secondItem="3sN-g2-dOC" secondAttribute="bottom" constant="40" id="DPC-ND-WsB"/>
-                            <constraint firstItem="3sN-g2-dOC" firstAttribute="leading" secondItem="Jfo-Bo-r0Q" secondAttribute="leading" constant="15" id="RC2-Gi-ViO"/>
-                            <constraint firstAttribute="trailing" secondItem="e6R-aM-NEt" secondAttribute="trailing" constant="15" id="bA2-xl-Y57"/>
-                            <constraint firstItem="e6R-aM-NEt" firstAttribute="leading" secondItem="0YV-dn-SEO" secondAttribute="leading" constant="15" id="hyQ-Y7-goW"/>
+                            <constraint firstItem="4fg-SV-W0p" firstAttribute="top" secondItem="9Q4-ii-Ir9" secondAttribute="bottom" constant="40" id="0by-jL-p8u"/>
+                            <constraint firstItem="4fg-SV-W0p" firstAttribute="leading" secondItem="8g7-s6-XPM" secondAttribute="leading" constant="15" id="0k5-Z9-rhc"/>
+                            <constraint firstItem="9Q4-ii-Ir9" firstAttribute="leading" secondItem="R4O-aq-0wb" secondAttribute="leading" constant="15" id="Lob-ow-oTu"/>
+                            <constraint firstItem="R4O-aq-0wb" firstAttribute="trailing" secondItem="9Q4-ii-Ir9" secondAttribute="trailing" constant="15" id="bpS-jn-GJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="4fg-SV-W0p" secondAttribute="trailing" constant="15" id="gXl-qW-hbc"/>
+                            <constraint firstItem="9Q4-ii-Ir9" firstAttribute="top" secondItem="R4O-aq-0wb" secondAttribute="top" constant="35" id="mJi-qN-xFA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="Jd6-gt-V1w"/>
                     <connections>
-                        <outlet property="additionalTextField" destination="AP0-db-9bH" id="zTa-5g-YKR"/>
-                        <outlet property="allMatchesLabel" destination="TKZ-lS-9OW" id="lhA-xM-Thv"/>
-                        <outlet property="allNotMatchesLabel" destination="dWl-jZ-zRq" id="4QX-mz-qXo"/>
-                        <outlet property="allUniqueCharactersLabel" destination="BAW-MF-Ou9" id="kNt-Gv-qV1"/>
-                        <outlet property="inputTextField" destination="KAM-sd-coE" id="ydH-9y-9Yk"/>
+                        <outlet property="additionalTextField" destination="K8S-76-5Km" id="kg7-Xu-SYn"/>
+                        <outlet property="allMatchesLabel" destination="l5K-uB-d7L" id="XBe-jJ-MhY"/>
+                        <outlet property="allNotMatchesLabel" destination="2Su-Pc-3Bo" id="2ob-Vw-QHb"/>
+                        <outlet property="allUniqueCharactersLabel" destination="j6H-Oj-mVc" id="iNc-Qc-ApL"/>
+                        <outlet property="inputTextField" destination="8NF-bD-nI6" id="tsY-yK-hbI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Es-0f-GE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
