@@ -268,7 +268,7 @@
         <!--Set-->
         <scene sceneID="ttt-xc-LLe">
             <objects>
-                <viewController id="IGJ-Ej-P01" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController id="IGJ-Ej-P01" customClass="SetViewController" customModule="Collections" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8uj-6g-cjF">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
