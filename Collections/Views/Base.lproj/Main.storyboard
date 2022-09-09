@@ -268,12 +268,119 @@
         <!--Set-->
         <scene sceneID="ttt-xc-LLe">
             <objects>
-                <viewController id="IGJ-Ej-P01" customClass="SetViewController" customModule="Collections" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8uj-6g-cjF">
+                <viewController id="IGJ-Ej-P01" customClass="SetViewController" customModule="Collections" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0YV-dn-SEO">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XLw-Iy-VIS"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-g2-dOC">
+                                <rect key="frame" x="15" y="123" width="398" height="88"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-sd-coE">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="InputTextField"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-db-9bH">
+                                        <rect key="frame" x="0.0" y="54" width="398" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AdditionalTextField"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-aM-NEt">
+                                <rect key="frame" x="15" y="251" width="398" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oc7-LJ-Egx">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllMatchesButton"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="All matching letters">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-lS-9OW">
+                                        <rect key="frame" x="0.0" y="30" width="398" height="25"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllMatchesLabel"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="GCz-uO-fb3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h4-aL-Ssv">
+                                        <rect key="frame" x="0.0" y="55" width="398" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllNotMatchesButton"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="All characters that don't match">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWl-jZ-zRq">
+                                        <rect key="frame" x="0.0" y="85" width="398" height="25"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllNotMatchesButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="ak2-fb-Nbc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jff-si-op0">
+                                        <rect key="frame" x="0.0" y="110" width="398" height="39"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllUniqueCharactersButton"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="All unique characters from the first textfield that don't match in textfield">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAW-MF-Ou9">
+                                        <rect key="frame" x="0.0" y="149" width="398" height="25"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllUniqueCharactersButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="uWo-iS-dja"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jfo-Bo-r0Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jfo-Bo-r0Q" firstAttribute="trailing" secondItem="3sN-g2-dOC" secondAttribute="trailing" constant="15" id="0Mf-GT-8Fj"/>
+                            <constraint firstItem="3sN-g2-dOC" firstAttribute="top" secondItem="Jfo-Bo-r0Q" secondAttribute="top" constant="35" id="9vQ-CN-AcG"/>
+                            <constraint firstItem="e6R-aM-NEt" firstAttribute="top" secondItem="3sN-g2-dOC" secondAttribute="bottom" constant="40" id="DPC-ND-WsB"/>
+                            <constraint firstItem="3sN-g2-dOC" firstAttribute="leading" secondItem="Jfo-Bo-r0Q" secondAttribute="leading" constant="15" id="RC2-Gi-ViO"/>
+                            <constraint firstAttribute="trailing" secondItem="e6R-aM-NEt" secondAttribute="trailing" constant="15" id="bA2-xl-Y57"/>
+                            <constraint firstItem="e6R-aM-NEt" firstAttribute="leading" secondItem="0YV-dn-SEO" secondAttribute="leading" constant="15" id="hyQ-Y7-goW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="Jd6-gt-V1w"/>
                 </viewController>
