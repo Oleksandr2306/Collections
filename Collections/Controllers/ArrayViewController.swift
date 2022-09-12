@@ -111,12 +111,11 @@ final class ArrayViewController: UICollectionViewController {
 extension ArrayViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let widthPerItem = collectionView.frame.width / 2
-        
+        let widthPerItem = collectionView.frame.width / CGFloat(2)
         if indexPath.item == 0  {
             return CGSize(width: collectionView.frame.width, height: CGFloat(firstCellHeight))
         } else {
-            return CGSize(width: widthPerItem, height: (collectionView.frame.height))
+            return CGSize(width: widthPerItem, height: CGFloat(firstCellHeight))
         }
     }
     

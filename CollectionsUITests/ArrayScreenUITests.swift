@@ -50,6 +50,7 @@ final class ArrayScreenUITests: XCTestCase {
         arrayCreation.tap()
         let result = XCTWaiter.wait(for: [expectation(description: "Array is created")], timeout: 10.0)
         if result == XCTWaiter.Result.timedOut {
+            app.swipeUp()
             arrayOptions[arrayOptions.endIndex - 1].tap()
             XCTAssertTrue(app.staticTexts["Execution time: 0.000 s."].exists)
         } else {

@@ -118,7 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rYw-v8-9S0">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rYw-v8-9S0">
                             <size key="itemSize" width="300" height="125"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -158,38 +158,35 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="OptionCell" id="vCg-bf-ulN" customClass="CustomCollectionViewCell" customModule="Collections" customModuleProvider="target">
-                                <rect key="frame" x="107" y="133" width="214" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="64" y="133" width="300" height="125"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jhx-rK-wGd">
-                                    <rect key="frame" x="0.0" y="0.0" width="214" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Array operation" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-LL-5Xl">
-                                            <rect key="frame" x="44.666666666666657" y="10" width="125" height="105"/>
+                                            <rect key="frame" x="10" y="10" width="280" height="105"/>
                                             <accessibility key="accessibilityConfiguration" identifier="ArrayOperation"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="125" id="KCG-n6-01u"/>
-                                                <constraint firstAttribute="height" constant="100" id="gIx-9y-yaG"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                             <color key="textColor" systemColor="linkColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hve-dw-Bl7">
-                                            <rect key="frame" x="97" y="52.666666666666664" width="20" height="19.999999999999993"/>
+                                            <rect key="frame" x="10" y="10" width="280" height="105"/>
                                         </activityIndicatorView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="o1q-LL-5Xl" firstAttribute="top" secondItem="jhx-rK-wGd" secondAttribute="top" constant="10" id="FgT-Ij-Sfz"/>
-                                        <constraint firstAttribute="bottom" secondItem="o1q-LL-5Xl" secondAttribute="bottom" constant="10" id="Lb5-S2-acg"/>
-                                        <constraint firstItem="Hve-dw-Bl7" firstAttribute="centerY" secondItem="jhx-rK-wGd" secondAttribute="centerY" id="exH-Y5-8KK"/>
-                                        <constraint firstItem="Hve-dw-Bl7" firstAttribute="centerX" secondItem="jhx-rK-wGd" secondAttribute="centerX" id="pAG-o8-YTX"/>
-                                        <constraint firstItem="o1q-LL-5Xl" firstAttribute="centerY" secondItem="jhx-rK-wGd" secondAttribute="centerY" id="rBs-Wt-kRq"/>
-                                        <constraint firstItem="o1q-LL-5Xl" firstAttribute="centerX" secondItem="jhx-rK-wGd" secondAttribute="centerX" id="wGg-kX-0me"/>
+                                        <constraint firstItem="Hve-dw-Bl7" firstAttribute="leading" secondItem="jhx-rK-wGd" secondAttribute="leading" constant="10" id="20g-J6-gHU"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hve-dw-Bl7" secondAttribute="trailing" constant="10" id="6uP-kL-Bxf"/>
+                                        <constraint firstAttribute="bottom" secondItem="o1q-LL-5Xl" secondAttribute="bottom" constant="10" id="9Um-zh-D5T"/>
+                                        <constraint firstItem="o1q-LL-5Xl" firstAttribute="leading" secondItem="jhx-rK-wGd" secondAttribute="leading" constant="10" id="TeA-zr-ZXw"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hve-dw-Bl7" secondAttribute="bottom" constant="10" id="cAo-qk-Twf"/>
+                                        <constraint firstItem="o1q-LL-5Xl" firstAttribute="top" secondItem="jhx-rK-wGd" secondAttribute="top" constant="10" id="kSn-O5-5iI"/>
+                                        <constraint firstAttribute="trailing" secondItem="o1q-LL-5Xl" secondAttribute="trailing" constant="10" id="kil-9D-dvF"/>
+                                        <constraint firstItem="Hve-dw-Bl7" firstAttribute="top" secondItem="jhx-rK-wGd" secondAttribute="top" constant="10" id="qeZ-Iq-pTe"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                <size key="customSize" width="214" height="125"/>
                                 <connections>
                                     <outlet property="activityIndicator" destination="Hve-dw-Bl7" id="v9z-yi-ajw"/>
                                     <outlet property="cellLabel" destination="o1q-LL-5Xl" id="Svs-oI-UQS"/>
