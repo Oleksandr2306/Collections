@@ -9,7 +9,7 @@ import Foundation
 
 final class SetManager {
     
-    func allMatchingCharacters(for first: String, and second: String) -> Set<String.Element> {
+    func characters(in first: String, matching second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()
@@ -18,7 +18,7 @@ final class SetManager {
         return result
     }
      
-    func allNotMatchingCharacters(for first: String, and second: String) -> Set<String.Element> {
+    func notMatchingCharacters(in first: String, and second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()
@@ -30,7 +30,7 @@ final class SetManager {
         return result
     }
     
-    func allUniqueCharacters(from first: String, butNotFrom second: String) -> Set<String.Element> {
+    func uniqueCharacters(from first: String, excluding second: String) -> Set<String.Element> {
         let input = Set(first)
         let exclusions = Set(second)
         var result = Set<String.Element>()

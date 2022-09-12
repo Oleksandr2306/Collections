@@ -8,7 +8,7 @@
 import XCTest
 @testable import Collections
 
-class SetTests: XCTestCase {
+final class SetTests: XCTestCase {
 
     private var sut: SetManager!
 
@@ -20,22 +20,22 @@ class SetTests: XCTestCase {
         sut = nil
     }
 
-    func test_allMatchingCharacters_fromBoth() throws {
-        let result = sut.allMatchingCharacters(for: "qwerty", and: "tw")
+    func test_characters_fromBoth() throws {
+        let result = sut.characters(in: "qwerty", matching: "tw")
         let expectedResult: Set<String.Element> = ["t", "w"]
         
         XCTAssertEqual(result, expectedResult)
     }
     
-    func test_allNotMatchingCharacters_fromBoth() throws {
-        let result = sut.allNotMatchingCharacters(for: "qwerty", and: "w")
+    func test_notMatchingCharacters_fromBoth() throws {
+        let result = sut.notMatchingCharacters(in: "qwerty", and: "w")
         let expectedResult: Set<String.Element> = ["q", "e", "r", "t", "y"]
         
         XCTAssertEqual(result, expectedResult)
     }
     
-    func test_allUniqueCharacters_fromFirst() throws {
-        let result = sut.allUniqueCharacters(from: "qwerty", butNotFrom: "qwyuio")
+    func test_uniqueCharacters_fromFirst() throws {
+        let result = sut.uniqueCharacters(from: "qwerty", excluding: "qwyuio")
         let expectedResult: Set<String.Element> = ["e", "r", "t"]
         
         XCTAssertEqual(result, expectedResult)

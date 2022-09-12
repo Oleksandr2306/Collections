@@ -28,7 +28,7 @@ final class SetViewController: UIViewController {
         guard let text1 = inputTextField.text else { return }
         guard let text2 = additionalTextField.text else { return }
         
-        let result = setManager.allMatchingCharacters(for: text1, and: text2)
+        let result = setManager.characters(in: text1, matching: text2)
         allMatchesLabel.text = String(result)
     }
     
@@ -36,7 +36,7 @@ final class SetViewController: UIViewController {
         guard let text1 = inputTextField.text else { return }
         guard let text2 = additionalTextField.text else { return }
         
-        let result = setManager.allNotMatchingCharacters(for: text1, and: text2)
+        let result = setManager.notMatchingCharacters(in: text1, and: text2)
         allNotMatchesLabel.text = String(result)
     }
     
@@ -44,7 +44,7 @@ final class SetViewController: UIViewController {
         guard let text1 = inputTextField.text else { return }
         guard let text2 = additionalTextField.text else { return }
         
-        let result = setManager.allUniqueCharacters(from: text1, butNotFrom: text2)
+        let result = setManager.uniqueCharacters(from: text1, excluding: text2)
         allUniqueCharactersLabel.text = String(result)
     }
     
